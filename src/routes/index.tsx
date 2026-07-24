@@ -26,6 +26,45 @@ export const Route = createFileRoute("/")({
       { name: "twitter:image", content: OG_URL },
     ],
     links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              name: "JKSoft",
+              url: "/",
+              logo: OG_URL,
+              sameAs: [],
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+62-811-1234-5678",
+                contactType: "customer support",
+                email: "support@jksoft.id",
+                areaServed: "ID",
+                availableLanguage: ["Indonesian", "English"],
+              },
+            },
+            {
+              "@type": "WebSite",
+              name: "JKSoft WhatsApp Gateway",
+              url: "/",
+              inLanguage: "id-ID",
+            },
+            {
+              "@type": "SoftwareApplication",
+              name: "JKSoft WhatsApp Gateway",
+              applicationCategory: "BusinessApplication",
+              operatingSystem: "Web",
+              description: DESCRIPTION,
+              offers: { "@type": "Offer", price: "0", priceCurrency: "IDR" },
+            },
+          ],
+        }),
+      },
+    ],
   }),
 });
 
