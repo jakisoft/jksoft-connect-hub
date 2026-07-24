@@ -20,42 +20,61 @@ export function SiteHero() {
 
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:gap-8 lg:px-8 lg:py-24">
         <div className="flex flex-col items-start">
-          <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary-soft px-3 py-1 text-xs font-semibold text-accent-foreground">
+          <span
+            data-aos="fade-up"
+            className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary-soft px-3 py-1 text-xs font-semibold text-accent-foreground"
+          >
             <span className="h-1.5 w-1.5 rounded-full bg-primary" />
             WhatsApp Gateway by JKSoft
           </span>
 
-          <h1 className="mt-5 text-4xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+          <h1
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className="mt-5 text-4xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-6xl"
+          >
             Otomatiskan Pesan Bisnis Anda dengan{" "}
             <span className="bg-[image:var(--gradient-primary)] bg-clip-text text-transparent">
               WhatsApp Gateway
             </span>
           </h1>
 
-          <p className="mt-5 max-w-xl text-base text-muted-foreground sm:text-lg">
+          <p
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="mt-5 max-w-xl text-base text-muted-foreground sm:text-lg"
+          >
             Kirim notifikasi, OTP, dan kampanye promosi ke ribuan pelanggan
             secara instan. API yang mudah diintegrasikan, dashboard yang intuitif,
             dan pengiriman pesan yang andal—semuanya dalam satu platform.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="300"
+            className="mt-8 flex flex-col gap-3 sm:flex-row"
+          >
             <a
               href="#contact"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-all hover:scale-[1.03] hover:shadow-[var(--shadow-glow)]"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-all duration-500 hover:scale-[1.03] hover:shadow-[var(--shadow-glow)]"
             >
               Coba Gratis Sekarang
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
             </a>
             <a
-              href="#help"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background/80 px-6 py-3 text-sm font-semibold text-foreground backdrop-blur transition-colors hover:bg-accent"
+              href="/bantuan"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background/80 px-6 py-3 text-sm font-semibold text-foreground backdrop-blur transition-colors duration-500 hover:bg-accent"
             >
               <PlayCircle className="h-4 w-4" />
               Lihat Demo
             </a>
           </div>
 
-          <dl className="mt-10 grid grid-cols-3 gap-6 border-t border-border pt-6 sm:gap-10">
+          <dl
+            data-aos="fade-up"
+            data-aos-delay="400"
+            className="mt-10 grid grid-cols-3 gap-6 border-t border-border pt-6 sm:gap-10"
+          >
             {[
               { icon: Zap, label: "Kecepatan", value: "99.9%" },
               { icon: ShieldCheck, label: "Aman", value: "End-to-end" },
@@ -72,7 +91,7 @@ export function SiteHero() {
           </dl>
         </div>
 
-        <div className="relative">
+        <div className="relative" data-aos="zoom-in" data-aos-delay="200">
           <div
             aria-hidden
             className="absolute inset-8 rounded-[2.5rem] bg-[image:var(--gradient-primary)] opacity-20 blur-2xl"
