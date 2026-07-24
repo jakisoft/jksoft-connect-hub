@@ -1,24 +1,42 @@
 import { createFileRoute } from "@tanstack/react-router";
+import ogImage from "../../public/og-image.jpg.asset.json";
+import { SiteHeader } from "@/components/site-header";
+import { SiteHero } from "@/components/site-hero";
+import { SiteFooter } from "@/components/site-footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const OG_URL = `https://id-preview--5e88fabe-7e0e-4c98-9677-b4ff9628d57c.lovable.app${ogImage.url}`;
+const TITLE = "JKSoft — WhatsApp Gateway untuk Otomatisasi Pesan Bisnis";
+const DESCRIPTION =
+  "JKSoft WhatsApp Gateway membantu bisnis mengirim notifikasi, OTP, dan kampanye promosi otomatis melalui WhatsApp dengan API yang andal dan mudah diintegrasikan.";
+
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { property: "og:image", content: OG_URL },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: TITLE },
+      { name: "twitter:description", content: DESCRIPTION },
+      { name: "twitter:image", content: OG_URL },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="flex min-h-screen flex-col bg-background">
+      <SiteHeader />
+      <main className="flex-1">
+        <SiteHero />
+      </main>
+      <SiteFooter />
     </div>
   );
 }
