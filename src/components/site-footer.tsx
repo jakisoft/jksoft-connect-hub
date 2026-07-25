@@ -1,14 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import {
-  MessageCircle,
   Mail,
   Phone,
   MapPin,
-  Twitter,
-  Github,
-  Linkedin,
-  Instagram,
 } from "lucide-react";
+import { BrandIcon } from "@/components/brand-icon";
 
 const columns = [
   {
@@ -41,10 +37,10 @@ const columns = [
 ];
 
 const socials = [
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Github, href: "#", label: "GitHub" },
+  { href: "#", label: "Twitter" },
+  { href: "#", label: "Instagram" },
+  { href: "#", label: "LinkedIn" },
+  { href: "#", label: "GitHub" },
 ];
 
 export function SiteFooter() {
@@ -54,9 +50,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <Link to="/" className="flex items-center gap-2">
-              <span className="grid h-9 w-9 place-items-center rounded-xl bg-[image:var(--gradient-primary)] text-primary-foreground shadow-[var(--shadow-soft)]">
-                <MessageCircle className="h-5 w-5" strokeWidth={2.5} />
-              </span>
+              <BrandIcon className="h-9 w-9" />
               <span className="text-lg font-bold tracking-tight text-foreground">
                 JKSoft
               </span>
@@ -110,14 +104,14 @@ export function SiteFooter() {
             © {new Date().getFullYear()} JKSoft. Semua hak dilindungi.
           </p>
           <div className="flex items-center gap-2">
-            {socials.map(({ icon: Icon, href, label }) => (
+            {socials.map(({ href, label }) => (
               <a
                 key={label}
                 href={href}
                 aria-label={label}
                 className="grid h-9 w-9 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary hover:text-primary"
               >
-                <Icon className="h-4 w-4" />
+                <BrandIcon className="h-5 w-5 rounded-full shadow-none" />
               </a>
             ))}
           </div>

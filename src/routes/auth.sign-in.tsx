@@ -14,7 +14,7 @@ const DESCRIPTION = "Masuk ke dashboard JKSoft untuk mengelola template, pengiri
 const CANONICAL_URL = "https://jksoft-connect-hub.lovable.app/auth/sign-in";
 const schema = z.object({ email: z.string().trim().email("Email tidak valid").max(255), password: z.string().min(8, "Password minimal 8 karakter").max(128) });
 
-export const Route = createFileRoute("/auth/sign-in")({ component: SignInPage, head: () => ({ meta: [{ title: TITLE }, { name: "description", content: DESCRIPTION }, { property: "og:title", content: TITLE }, { property: "og:description", content: DESCRIPTION }, { property: "og:type", content: "website" }, { property: "og:url", content: CANONICAL_URL }, { name: "twitter:card", content: "summary" }, { name: "robots", content: "noindex" }], links: [{ rel: "canonical", href: CANONICAL_URL }] }) });
+export const Route = createFileRoute("/auth/sign-in")({ component: SignInPage, head: () => ({ meta: [{ title: TITLE }, { name: "description", content: DESCRIPTION }, { property: "og:title", content: TITLE }, { property: "og:description", content: DESCRIPTION }, { property: "og:type", content: "website" }, { property: "og:url", content: CANONICAL_URL }, { property: "og:image", content: "https://jksoft-connect-hub.lovable.app/og-auth.svg" }, { name: "twitter:card", content: "summary_large_image" }, { name: "twitter:image", content: "https://jksoft-connect-hub.lovable.app/og-auth.svg" }, { name: "robots", content: "noindex" }], links: [{ rel: "canonical", href: CANONICAL_URL }] }) });
 
 function SignInPage() {
   const navigate = useNavigate();
