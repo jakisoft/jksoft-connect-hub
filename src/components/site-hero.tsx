@@ -21,7 +21,6 @@ export function SiteHero() {
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:gap-8 lg:px-8 lg:py-24">
         <div className="flex flex-col items-start">
           <span
-            data-aos="fade-up"
             className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary-soft px-3 py-1 text-xs font-semibold text-accent-foreground"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-primary" />
@@ -29,8 +28,6 @@ export function SiteHero() {
           </span>
 
           <h1
-            data-aos="fade-up"
-            data-aos-delay="100"
             className="mt-5 text-4xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-5xl lg:text-6xl"
           >
             Otomatiskan Pesan Bisnis Anda dengan{" "}
@@ -40,8 +37,6 @@ export function SiteHero() {
           </h1>
 
           <p
-            data-aos="fade-up"
-            data-aos-delay="200"
             className="mt-5 max-w-xl text-base text-muted-foreground sm:text-lg"
           >
             Kirim notifikasi, OTP, dan kampanye promosi ke ribuan pelanggan
@@ -50,8 +45,6 @@ export function SiteHero() {
           </p>
 
           <div
-            data-aos="fade-up"
-            data-aos-delay="300"
             className="mt-8 flex flex-col gap-3 sm:flex-row"
           >
             <a
@@ -71,8 +64,6 @@ export function SiteHero() {
           </div>
 
           <dl
-            data-aos="fade-up"
-            data-aos-delay="400"
             className="mt-10 grid grid-cols-3 gap-6 border-t border-border pt-6 sm:gap-10"
           >
             {[
@@ -91,7 +82,7 @@ export function SiteHero() {
           </dl>
         </div>
 
-        <div className="relative" data-aos="zoom-in" data-aos-delay="200">
+        <div className="relative">
           <div
             aria-hidden
             className="absolute inset-8 rounded-[2.5rem] bg-[image:var(--gradient-primary)] opacity-20 blur-2xl"

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { AlignEndHorizontal } from "lucide-react";
+import { TextAlignEnd } from "lucide-react";
 import { BrandIcon } from "@/components/brand-icon";
 
 type NavItem =
@@ -77,7 +77,7 @@ export function SiteHeader() {
           onClick={() => setOpen((v) => !v)}
           className="inline-flex items-center justify-center p-0 text-foreground transition-colors duration-500 hover:text-primary md:hidden"
         >
-          <AlignEndHorizontal className={`h-7 w-7 transition-transform duration-500 ${open ? "rotate-180 text-primary" : ""}`} />
+          <TextAlignEnd className={`h-7 w-7 transition-transform duration-500 ${open ? "rotate-180 text-primary" : ""}`} />
         </button>
       </div>
 
