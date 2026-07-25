@@ -36,24 +36,27 @@
       <tspan x="0" y="126">Otomatisasi pesan bisnis dengan desain preview</tspan>
       <tspan x="0" y="160">yang clean, konsisten, dan mudah dikenali.</tspan>
     </text>
-    <rect x="0" y="202" width="246" height="56" rx="28" fill="#2563eb" />
-    <text x="123" y="237" fill="#ffffff" font-family="Inter, Arial, Helvetica, sans-serif" font-size="20" font-weight="800" text-anchor="middle">Connect Hub</text>
   </g>
 
-  <g transform="translate(792 166)">
-    <rect width="270" height="300" rx="32" fill="#f8fbff" stroke="#dbeafe" stroke-width="2" />
-    <rect x="26" y="28" width="218" height="54" rx="18" fill="#eff6ff" />
-    <circle cx="54" cy="55" r="13" fill="#2563eb" />
-    <rect x="80" y="44" width="118" height="10" rx="5" fill="#93c5fd" />
-    <rect x="80" y="62" width="82" height="8" rx="4" fill="#bfdbfe" />
+  <g transform="translate(828 154)">
+    <rect width="226" height="246" rx="28" fill="#f8fbff" stroke="#dbeafe" stroke-width="2" />
+    <rect x="22" y="24" width="182" height="46" rx="15" fill="#eff6ff" />
+    <circle cx="48" cy="47" r="11" fill="#2563eb" />
+    <rect x="72" y="37" width="98" height="8" rx="5" fill="#93c5fd" />
+    <rect x="72" y="53" width="70" height="7" rx="4" fill="#bfdbfe" />
 
-    <rect x="26" y="108" width="218" height="66" rx="20" fill="#ffffff" stroke="#e2e8f0" />
-    <rect x="48" y="130" width="104" height="10" rx="5" fill="#0f172a" opacity="0.82" />
-    <rect x="48" y="152" width="150" height="9" rx="4.5" fill="#94a3b8" opacity="0.72" />
+    <rect x="22" y="92" width="182" height="56" rx="17" fill="#ffffff" stroke="#e2e8f0" />
+    <rect x="40" y="111" width="88" height="8" rx="5" fill="#0f172a" opacity="0.82" />
+    <rect x="40" y="130" width="126" height="7" rx="4.5" fill="#94a3b8" opacity="0.72" />
 
-    <rect x="26" y="196" width="96" height="70" rx="20" fill="#2563eb" />
-    <rect x="148" y="196" width="96" height="70" rx="20" fill="#dbeafe" />
-    <path d="M48 244c18-22 36 10 54-18" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" />
-    <path d="M170 244c18-22 36 10 54-18" fill="none" stroke="#2563eb" stroke-width="7" stroke-linecap="round" />
+    <rect x="22" y="168" width="80" height="54" rx="16" fill="#2563eb" />
+    <rect x="124" y="168" width="80" height="54" rx="16" fill="#dbeafe" />
+    <path d="M40 205c15-17 30 8 46-14" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" />
+    <path d="M142 205c15-17 30 8 46-14" fill="none" stroke="#2563eb" stroke-width="7" stroke-linecap="round" />
+  </g>
+
+  <g transform="translate(828 430)">
+    <rect width="226" height="54" rx="27" fill="#2563eb" />
+    <text x="113" y="34" fill="#ffffff" font-family="Inter, Arial, Helvetica, sans-serif" font-size="19" font-weight="800" text-anchor="middle">Connect Hub</text>
   </g>
 </svg>
