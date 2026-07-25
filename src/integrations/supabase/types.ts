@@ -188,33 +188,45 @@ export type Database = {
       }
       profiles: {
         Row: {
-          company_name: string | null
+          country_code: string | null
+          country_name: string | null
           created_at: string
+          email: string | null
           email_verified: boolean
           full_name: string | null
           id: string
+          phone_prefix: string | null
+          role: string
           updated_at: string
           user_id: string
           whatsapp_number: string | null
           whatsapp_verified: boolean
         }
         Insert: {
-          company_name?: string | null
+          country_code?: string | null
+          country_name?: string | null
           created_at?: string
+          email?: string | null
           email_verified?: boolean
           full_name?: string | null
           id?: string
+          phone_prefix?: string | null
+          role?: string
           updated_at?: string
           user_id: string
           whatsapp_number?: string | null
           whatsapp_verified?: boolean
         }
         Update: {
-          company_name?: string | null
+          country_code?: string | null
+          country_name?: string | null
           created_at?: string
+          email?: string | null
           email_verified?: boolean
           full_name?: string | null
           id?: string
+          phone_prefix?: string | null
+          role?: string
           updated_at?: string
           user_id?: string
           whatsapp_number?: string | null
