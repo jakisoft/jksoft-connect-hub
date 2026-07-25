@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import ogImage from "../../public/og-image.jpg.asset.json";
 import { SiteHeader } from "@/components/site-header";
 import { SiteHero } from "@/components/site-hero";
 import { SiteFooter } from "@/components/site-footer";
 
-const OG_URL = `https://id-preview--5e88fabe-7e0e-4c98-9677-b4ff9628d57c.lovable.app${ogImage.url}`;
+const SITE_URL = "https://jksoft-connect-hub.lovable.app";
+const OG_URL = `${SITE_URL}/og-icon.svg`;
 const TITLE = "JKSoft — WhatsApp Gateway untuk Otomatisasi Pesan Bisnis";
 const DESCRIPTION =
   "JKSoft WhatsApp Gateway membantu bisnis mengirim notifikasi, OTP, dan kampanye promosi otomatis melalui WhatsApp dengan API yang andal dan mudah diintegrasikan.";
@@ -18,14 +18,14 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: SITE_URL },
       { property: "og:image", content: OG_URL },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
       { name: "twitter:image", content: OG_URL },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: SITE_URL }],
     scripts: [
       {
         type: "application/ld+json",
@@ -35,7 +35,7 @@ export const Route = createFileRoute("/")({
             {
               "@type": "Organization",
               name: "JKSoft",
-              url: "/",
+              url: SITE_URL,
               logo: OG_URL,
               sameAs: [],
               contactPoint: {
@@ -50,7 +50,7 @@ export const Route = createFileRoute("/")({
             {
               "@type": "WebSite",
               name: "JKSoft WhatsApp Gateway",
-              url: "/",
+              url: SITE_URL,
               inLanguage: "id-ID",
             },
             {

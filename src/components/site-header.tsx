@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { AlignEndHorizontal, MessageCircle, X } from "lucide-react";
+import { AlignEndHorizontal, MessageCircle } from "lucide-react";
 
 type NavItem =
   | { label: string; type: "hash"; href: string }
@@ -9,6 +9,7 @@ type NavItem =
 const navLinks: NavItem[] = [
   { label: "Beranda", type: "route", to: "/" },
   { label: "Fitur", type: "hash", href: "/#features" },
+  { label: "Dashboard", type: "route", to: "/dashboard" },
   { label: "Bantuan", type: "route", to: "/bantuan" },
   { label: "Kontak", type: "hash", href: "/#contact" },
 ];
@@ -57,17 +58,17 @@ export function SiteHeader() {
 
         <div className="hidden items-center gap-3 md:flex" data-aos="fade-left">
           <Link
-            to="/auth"
+            to="/auth/sign-in"
             className="text-sm font-medium text-muted-foreground transition-colors duration-500 hover:text-primary"
           >
             Masuk
           </Link>
-          <a
-            href="#contact"
+          <Link
+            to="/auth/sign-up"
             className="inline-flex items-center rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition-all duration-500 hover:scale-[1.03] hover:shadow-[var(--shadow-glow)]"
           >
             Mulai Sekarang
-          </a>
+          </Link>
         </div>
 
         <button
@@ -75,18 +76,20 @@ export function SiteHeader() {
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex items-center justify-center p-2 text-foreground transition-colors duration-500 hover:text-primary md:hidden"
+          className="inline-flex items-center justify-center p-0 text-foreground transition-colors duration-500 hover:text-primary md:hidden"
         >
-          {open ? <X className="h-6 w-6" /> : <AlignEndHorizontal className="h-6 w-6" />}
+          <AlignEndHorizontal className={`h-7 w-7 transition-transform duration-500 ${open ? "rotate-180 text-primary" : ""}`} />
         </button>
       </div>
 
       <div
-        className={`grid overflow-hidden border-border bg-background transition-[grid-template-rows,border] duration-700 ease-in-out md:hidden ${
-          open ? "grid-rows-[1fr] border-t" : "grid-rows-[0fr]"
+        className={`absolute left-0 right-0 top-full border-t border-border bg-background/95 shadow-[var(--shadow-soft)] backdrop-blur-xl transition-all duration-700 ease-in-out md:hidden ${
+          open
+            ? "pointer-events-auto translate-y-0 opacity-100"
+            : "pointer-events-none -translate-y-3 opacity-0"
         }`}
       >
-        <div className="min-h-0 overflow-hidden">
+        <div>
           <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
             {navLinks.map((l) =>
               l.type === "route" ? (
@@ -115,19 +118,19 @@ export function SiteHeader() {
               ),
             )}
             <Link
-              to="/auth"
+              to="/auth/sign-in"
               onClick={() => setOpen(false)}
               className="mt-2 rounded-lg px-3 py-2 text-sm font-medium text-foreground transition-colors duration-500 hover:bg-accent"
             >
               Masuk
             </Link>
-            <a
-              href="#contact"
+            <Link
+              to="/auth/sign-up"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)]"
             >
               Mulai Sekarang
-            </a>
+            </Link>
           </nav>
         </div>
       </div>
