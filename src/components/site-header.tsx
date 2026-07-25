@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { AlignEndHorizontal, MessageCircle } from "lucide-react";
+import { AlignEndHorizontal } from "lucide-react";
+import { BrandIcon } from "@/components/brand-icon";
 
 type NavItem =
   | { label: string; type: "hash"; href: string }
@@ -27,16 +28,14 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur-lg">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-2" data-aos="fade-right">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-[image:var(--gradient-primary)] text-primary-foreground shadow-[var(--shadow-soft)]">
-            <MessageCircle className="h-5 w-5" strokeWidth={2.5} />
-          </span>
+        <Link to="/" className="flex items-center gap-2">
+          <BrandIcon className="h-9 w-9" />
           <span className="text-lg font-bold tracking-tight text-foreground">
             JKSoft
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex" data-aos="fade-down">
+        <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((l) =>
             l.type === "route" ? (
               <Link
@@ -56,7 +55,7 @@ export function SiteHeader() {
           )}
         </nav>
 
-        <div className="hidden items-center gap-3 md:flex" data-aos="fade-left">
+        <div className="hidden items-center gap-3 md:flex">
           <Link
             to="/auth/sign-in"
             className="text-sm font-medium text-muted-foreground transition-colors duration-500 hover:text-primary"
