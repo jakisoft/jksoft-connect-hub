@@ -14,7 +14,214 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      conversation_messages: {
+        Row: {
+          body: string
+          conversation_id: string
+          created_at: string
+          direction: string
+          id: string
+          status: string
+          user_id: string
+        }
+        Insert: {
+          body: string
+          conversation_id: string
+          created_at?: string
+          direction: string
+          id?: string
+          status?: string
+          user_id: string
+        }
+        Update: {
+          body?: string
+          conversation_id?: string
+          created_at?: string
+          direction?: string
+          id?: string
+          status?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "conversation_messages_conversation_id_fkey"
+            columns: ["conversation_id"]
+            isOneToOne: false
+            referencedRelation: "conversations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      conversations: {
+        Row: {
+          contact_name: string
+          contact_phone: string
+          created_at: string
+          id: string
+          last_message: string | null
+          last_message_at: string | null
+          status: string
+          unread_count: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          contact_name: string
+          contact_phone: string
+          created_at?: string
+          id?: string
+          last_message?: string | null
+          last_message_at?: string | null
+          status?: string
+          unread_count?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          contact_name?: string
+          contact_phone?: string
+          created_at?: string
+          id?: string
+          last_message?: string | null
+          last_message_at?: string | null
+          status?: string
+          unread_count?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      message_deliveries: {
+        Row: {
+          created_at: string
+          delivered_at: string | null
+          error_message: string | null
+          id: string
+          message_preview: string
+          provider_message_id: string | null
+          read_at: string | null
+          recipient_name: string | null
+          recipient_phone: string
+          sent_at: string | null
+          status: string
+          template_id: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          delivered_at?: string | null
+          error_message?: string | null
+          id?: string
+          message_preview: string
+          provider_message_id?: string | null
+          read_at?: string | null
+          recipient_name?: string | null
+          recipient_phone: string
+          sent_at?: string | null
+          status?: string
+          template_id?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          delivered_at?: string | null
+          error_message?: string | null
+          id?: string
+          message_preview?: string
+          provider_message_id?: string | null
+          read_at?: string | null
+          recipient_name?: string | null
+          recipient_phone?: string
+          sent_at?: string | null
+          status?: string
+          template_id?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "message_deliveries_template_id_fkey"
+            columns: ["template_id"]
+            isOneToOne: false
+            referencedRelation: "message_templates"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      message_templates: {
+        Row: {
+          category: string
+          content: string
+          created_at: string
+          id: string
+          name: string
+          status: string
+          updated_at: string
+          user_id: string
+          variables: string[]
+        }
+        Insert: {
+          category?: string
+          content: string
+          created_at?: string
+          id?: string
+          name: string
+          status?: string
+          updated_at?: string
+          user_id: string
+          variables?: string[]
+        }
+        Update: {
+          category?: string
+          content?: string
+          created_at?: string
+          id?: string
+          name?: string
+          status?: string
+          updated_at?: string
+          user_id?: string
+          variables?: string[]
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          company_name: string | null
+          created_at: string
+          email_verified: boolean
+          full_name: string | null
+          id: string
+          updated_at: string
+          user_id: string
+          whatsapp_number: string | null
+          whatsapp_verified: boolean
+        }
+        Insert: {
+          company_name?: string | null
+          created_at?: string
+          email_verified?: boolean
+          full_name?: string | null
+          id?: string
+          updated_at?: string
+          user_id: string
+          whatsapp_number?: string | null
+          whatsapp_verified?: boolean
+        }
+        Update: {
+          company_name?: string | null
+          created_at?: string
+          email_verified?: boolean
+          full_name?: string | null
+          id?: string
+          updated_at?: string
+          user_id?: string
+          whatsapp_number?: string | null
+          whatsapp_verified?: boolean
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
