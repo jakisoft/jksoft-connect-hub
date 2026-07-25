@@ -19,6 +19,7 @@ import { SiteFooter } from "@/components/site-footer";
 const TITLE = "Bantuan & FAQ — JKSoft WhatsApp Gateway";
 const DESCRIPTION =
   "Panduan awal, integrasi API, harga, dan pertanyaan yang sering diajukan tentang JKSoft WhatsApp Gateway. Temukan jawaban cepat untuk mulai menggunakan layanan.";
+const CANONICAL_URL = "https://jksoft-connect-hub.lovable.app/bantuan";
 
 const faqs = [
   {
@@ -110,12 +111,12 @@ export const Route = createFileRoute("/bantuan")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/bantuan" },
+      { property: "og:url", content: CANONICAL_URL },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESCRIPTION },
     ],
-    links: [{ rel: "canonical", href: "/bantuan" }],
+    links: [{ rel: "canonical", href: CANONICAL_URL }],
     scripts: [
       {
         type: "application/ld+json",
