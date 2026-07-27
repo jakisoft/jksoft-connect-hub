@@ -4,7 +4,7 @@ import { SiteHero } from "@/components/site-hero";
 import { SiteFooter } from "@/components/site-footer";
 
 const SITE_URL = "https://jksoft-connect-hub.lovable.app";
-const OG_URL = `${SITE_URL}/og-home.svg`;
+const OG_URL = `${SITE_URL}/og-home.png`;
 const TITLE = "JKSoft — WhatsApp Gateway untuk Otomatisasi Pesan Bisnis";
 const DESCRIPTION =
   "JKSoft WhatsApp Gateway membantu bisnis mengirim notifikasi, OTP, dan kampanye promosi otomatis melalui WhatsApp dengan API yang andal dan mudah diintegrasikan.";
