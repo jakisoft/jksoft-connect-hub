@@ -189,10 +189,14 @@ export type Database = {
       profiles: {
         Row: {
           company_name: string | null
+          country_code: string | null
+          country_name: string | null
           created_at: string
+          email: string | null
           email_verified: boolean
           full_name: string | null
           id: string
+          phone_prefix: string | null
           updated_at: string
           user_id: string
           whatsapp_number: string | null
@@ -200,10 +204,14 @@ export type Database = {
         }
         Insert: {
           company_name?: string | null
+          country_code?: string | null
+          country_name?: string | null
           created_at?: string
+          email?: string | null
           email_verified?: boolean
           full_name?: string | null
           id?: string
+          phone_prefix?: string | null
           updated_at?: string
           user_id: string
           whatsapp_number?: string | null
@@ -211,10 +219,14 @@ export type Database = {
         }
         Update: {
           company_name?: string | null
+          country_code?: string | null
+          country_name?: string | null
           created_at?: string
+          email?: string | null
           email_verified?: boolean
           full_name?: string | null
           id?: string
+          phone_prefix?: string | null
           updated_at?: string
           user_id?: string
           whatsapp_number?: string | null
